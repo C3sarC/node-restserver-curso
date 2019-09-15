@@ -9,8 +9,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'DEV';
 
 ////////////BaseDeDatos/////////////
 //local: mongodb://localhost:27017/cafe
-//remoto: mongodb+srv://adminCC:qfcWg67vS6EjBTwr@cluster0-s0zir.mongodb.net/test
 
-let urlDB = process.env.NODE_ENV === 'DEV' ? 'mongodb://localhost:27017/cafe' : 'mongodb+srv://adminCC:qfcWg67vS6EjBTwr@cluster0-s0zir.mongodb.net/test';
+let urlDB = process.env.NODE_ENV === 'DEV' ? 'mongodb://localhost:27017/cafe' : process.env.MONGO_URI;
 
 process.env.URLDB = urlDB;
